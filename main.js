@@ -5,11 +5,12 @@ div.classList.add('container')
 
 const input = document.createElement('input')
 input.setAttribute('type', 'text')
+input.setAttribute('placeholder' , 'Rentre ici ce que tu as à faire !');
 
 const button=document.createElement('button')
 button.setAttribute('type', 'button')
-button.style.width = '40px';
-button.style.height = '15px';
+button.innerHTML = 'Submit';
+
 
 button.addEventListener('click',()=>{
   const val= document.querySelector('input').value
