@@ -1,19 +1,28 @@
 const app = document.querySelector('#app')
 
-const div = document.createElement('div')
-div.classList.add('container')
-div.style.backgroundColor= 'red'
-div.innerText = 'Hello World'
-div.setAttribute('type, text')
+const form = document.createElement('div')
+form.classList.add('container')
 
-div.classList.add('input')
-div.setAttribute('type, radio')
+const list= document.createElement('ul')
 
-div.classList.add('button')
-div.setAttribute('type, button')
+const input = document.createElement('input')
+input.setAttribute('type', 'text')
 
+const button=document.createElement('button')
+button.setAttribute('type', 'button')
+button.style.width = '40px';
+button.style.height = '15px';
 
-div.addEventListener('click',()=>{
-  div.style.backgroundColor = 'blue'
+button.addEventListener('click',()=>{
+  const val= input.value
+  const li= document.createElement('li')
+  li.innerText= val
+  list.appendChild(li)
 })
-app.appendChild(div)
+
+
+form.appendChild(input)
+form.appendChild(button)
+
+app.appendChild(form)
+app.appendChild(list)
