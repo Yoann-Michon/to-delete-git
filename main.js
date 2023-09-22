@@ -7,11 +7,14 @@ const list= document.createElement('ul')
 
 const input = document.createElement('input')
 input.setAttribute('type', 'text')
+input.setAttribute('placeholder' , 'Rentre ici ce que tu as à faire !');
+input.setAttribute('id', 'myInput');
+input.setAttribute('class', 'form__field');
 
 const button=document.createElement('button')
 button.setAttribute('type', 'button')
-button.style.width = '40px';
-button.style.height = '15px';
+button.setAttribute('class', "glow-on-hover");
+button.innerHTML = 'Submit';
 
 button.addEventListener('click',()=>{
   const val= input.value
@@ -19,7 +22,6 @@ button.addEventListener('click',()=>{
   li.innerText= val
   list.appendChild(li)
 })
-
 
 form.appendChild(input)
 form.appendChild(button)
