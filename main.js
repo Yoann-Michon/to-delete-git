@@ -11,6 +11,11 @@ button.setAttribute('type', 'button')
 button.style.width = '40px';
 button.style.height = '15px';
 
+button.addEventListener('click',()=>{
+  const val= document.querySelector('input').value
+  alert(val)
+})
+
 div.addEventListener('click',()=>{
 
 })
