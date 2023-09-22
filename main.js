@@ -23,18 +23,22 @@ button.addEventListener('click',()=>{
   li.innerText= val
   const check = document.createElement('input');
   check.setAttribute('type', 'checkbox');
+  let myToDoArray = []
+  myToDoArray.push(val);
   check.addEventListener('change', () =>{
     if(check.checked){
       li.style.textDecoration = 'line-through';
+      localStorage.setItem(myToDoArray, JSON.stringify(true));
     }else{
       li.style.textDecoration = 'none';
+      localStorage.setItem(val, JSON.stringify(false));
+
     }
   })
 
   container.appendChild(check);
   container.appendChild(li);
   list.appendChild(container);
-
 
 })
 
