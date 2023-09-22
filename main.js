@@ -17,11 +17,28 @@ button.setAttribute('class', "glow-on-hover");
 button.innerHTML = 'Submit';
 
 button.addEventListener('click',()=>{
+  const container = document.createElement('div');
   const val= input.value
   const li= document.createElement('li')
   li.innerText= val
-  list.appendChild(li)
+  const check = document.createElement('input');
+  check.setAttribute('type', 'checkbox');
+  check.addEventListener('change', () =>{
+    if(check.checked){
+      li.style.textDecoration = 'line-through';
+    }else{
+      li.style.textDecoration = 'none';
+    }
+  })
+
+  container.appendChild(check);
+  container.appendChild(li);
+  list.appendChild(container);
+
+
 })
+
+
 
 form.appendChild(input)
 form.appendChild(button)
