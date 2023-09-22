@@ -21,10 +21,11 @@ button.addEventListener('click',()=>{
   const val= input.value
   const li= document.createElement('li')
   li.innerText= val
-  const check = document.createElement('input');
-  check.setAttribute('type', 'checkbox');
   let myToDoArray = []
   myToDoArray.push(val);
+  localStorage.setItem(val, JSON.stringify(false))
+  const check = document.createElement('input');
+  check.setAttribute('type', 'checkbox');
   check.addEventListener('change', () =>{
     if(check.checked){
       li.style.textDecoration = 'line-through';
