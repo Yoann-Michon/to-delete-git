@@ -24,7 +24,11 @@ button.addEventListener('click',()=>{
   const check = document.createElement('input');
   check.setAttribute('type', 'checkbox');
   check.addEventListener('change', () =>{
-    li.style.textDecoration = 'line-through';
+    if(check.checked){
+      li.style.textDecoration = 'line-through';
+    }else{
+      li.style.textDecoration = 'none';
+    }
   })
 
   container.appendChild(check);
