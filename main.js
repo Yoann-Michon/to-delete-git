@@ -20,6 +20,13 @@ button.addEventListener('click',()=>{
   const container = document.createElement('div');
   const val= input.value
   const li= document.createElement('li')
+  const supp=document.createElement('button')
+  supp.innerText='supprimer'
+  supp.addEventListener('click',()=>{
+    li.remove();
+    supp.remove()
+    check.remove()
+  })
   li.innerText= val
   let myToDoArray = []
   myToDoArray.push(val);
@@ -35,8 +42,9 @@ button.addEventListener('click',()=>{
       localStorage.setItem(val, JSON.stringify(false));
 
     }
-  })
 
+  })
+  container.appendChild(supp)
   container.appendChild(check);
   container.appendChild(li);
   list.appendChild(container);
