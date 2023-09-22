@@ -26,6 +26,7 @@ button.addEventListener('click',()=>{
     li.remove();
     supp.remove()
     check.remove()
+    localStorage.removeItem(val);
   })
   li.innerText= val
   let myToDoArray = []
