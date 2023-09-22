@@ -12,7 +12,7 @@ div.setAttribute('type, radio')
 div.classList.add('button')
 div.setAttribute('type, button')
 
-div
+
 div.addEventListener('click',()=>{
   div.style.backgroundColor = 'blue'
 })
