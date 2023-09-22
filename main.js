@@ -6,6 +6,10 @@ div.classList.add('container')
 const input = document.createElement('input')
 input.setAttribute('type', 'text')
 input.setAttribute('placeholder' , 'Rentre ici ce que tu as à faire !');
+input.setAttribute('id', 'myInput');
+input.setAttribute('class', 'form__field');
+
+
 
 const button=document.createElement('button')
 button.setAttribute('type', 'button')

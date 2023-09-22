@@ -9,6 +9,8 @@ input[type=text]{
   width: 100%;
 }
 
+/* button style  */
+
 button{
   width: 100px;
 }
@@ -72,3 +74,4 @@ button{
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+
