@@ -9,6 +9,7 @@ input.setAttribute('placeholder' , 'Rentre ici ce que tu as à faire !');
 
 const button=document.createElement('button')
 button.setAttribute('type', 'button')
+button.setAttribute('class', "glow-on-hover");
 button.innerHTML = 'Submit';
 
 
